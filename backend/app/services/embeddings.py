@@ -18,6 +18,8 @@ def _norm(v):
 @lru_cache(maxsize=1)
 def clip_model():
     global _clip
+    if os.environ.get('RENDER'):
+        return None
     if _clip is None:
         try:
             from sentence_transformers import SentenceTransformer
@@ -30,6 +32,8 @@ def clip_model():
 @lru_cache(maxsize=1)
 def text_model():
     global _text
+    if os.environ.get('RENDER'):
+        return None
     if _text is None:
         try:
             from sentence_transformers import SentenceTransformer
