@@ -1,0 +1,38 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: lf
+      POSTGRES_PASSWORD: lfpass
+      POSTGRES_DB: lostfound
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  backend:
+    build: ./backend
+    env_file: .env
+    depends_on:
+      - db
+    volumes:
+      - uploads:/data/uploads
+      - ./backend:/code
+      - ./data:/data/seed
+      - ./scripts:/code/scripts
+    ports:
+      - '8000:8000'
+
+  frontend:
+    build: ./frontend
+    environment:
+      VITE_API_URL: http://localhost:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - '5173:5173'
+
+volumes:
+  dbdata:
+  uploads:

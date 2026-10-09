@@ -1,0 +1,627 @@
+{
+  "backpack": {
+    "group": "bags",
+    "questions": {
+      "front_pocket_contents": {
+        "q": "What is inside the front pocket?",
+        "options": [
+          "a blue pen and a charger",
+          "two notebooks",
+          "a water bottle",
+          "a pair of earphones",
+          "a calculator and a ruler",
+          "a lunch box",
+          "an umbrella",
+          "tissues and a comb"
+        ]
+      },
+      "keychain": {
+        "q": "Describe the keychain attached to it.",
+        "options": [
+          "a small panda keychain",
+          "a metal bottle-opener keychain",
+          "a red heart keychain",
+          "no keychain",
+          "a football keychain",
+          "a brass ring with a bell"
+        ]
+      },
+      "inner_lining_color": {
+        "q": "What is the colour of the inner lining?",
+        "options": [
+          "red",
+          "black",
+          "grey",
+          "blue",
+          "orange",
+          "green"
+        ]
+      },
+      "tag_or_sticker": {
+        "q": "Is there any tag or sticker on it?",
+        "options": [
+          "a name tag with initials",
+          "a Spiderman sticker",
+          "a bus pass holder",
+          "no sticker",
+          "a college fest tag",
+          "a yellow ribbon on the zip"
+        ]
+      }
+    }
+  },
+  "phone": {
+    "group": "electronics",
+    "questions": {
+      "wallpaper": {
+        "q": "What wallpaper is on the phone?",
+        "options": [
+          "a mountain sunset",
+          "a cricket player photo",
+          "a family photo",
+          "plain black",
+          "an anime character",
+          "a car photo",
+          "a beach photo",
+          "a cat photo"
+        ]
+      },
+      "back_sticker": {
+        "q": "What is stuck to the back of the phone?",
+        "options": [
+          "a small smiley sticker",
+          "no sticker",
+          "a band logo sticker",
+          "a ring holder",
+          "a metro card in the cover",
+          "a heart sticker"
+        ]
+      },
+      "case_type": {
+        "q": "What kind of case does it have?",
+        "options": [
+          "transparent case",
+          "black silicone case",
+          "flip cover",
+          "blue hard case",
+          "green case with raised corners",
+          "no case"
+        ]
+      },
+      "screen_damage": {
+        "q": "Is there any screen damage?",
+        "options": [
+          "crack at top-left corner",
+          "no cracks",
+          "scratched tempered glass",
+          "small chip on the bottom edge",
+          "a dead pixel line"
+        ]
+      }
+    }
+  },
+  "wallet": {
+    "group": "accessories",
+    "questions": {
+      "card_in_first_slot": {
+        "q": "Which card is in the first slot?",
+        "options": [
+          "a bus pass",
+          "a debit card",
+          "a library card",
+          "a college ID",
+          "a metro card",
+          "a gym membership card"
+        ]
+      },
+      "cash_range": {
+        "q": "Roughly how much cash is inside?",
+        "options": [
+          "under 100 rupees",
+          "100 to 500 rupees",
+          "500 to 2000 rupees",
+          "over 2000 rupees",
+          "no cash"
+        ]
+      },
+      "photo_inside": {
+        "q": "Is there a photo inside?",
+        "options": [
+          "a passport-size photo",
+          "a family photo",
+          "no photo",
+          "a small deity picture",
+          "a polaroid"
+        ]
+      },
+      "other_item": {
+        "q": "What other small item is inside?",
+        "options": [
+          "a folded receipt",
+          "a coin",
+          "a movie ticket",
+          "a visiting card",
+          "a small key",
+          "a library slip"
+        ]
+      }
+    }
+  },
+  "water bottle": {
+    "group": "drinkware",
+    "questions": {
+      "sticker": {
+        "q": "What sticker is on the bottle?",
+        "options": [
+          "a football sticker",
+          "no sticker",
+          "a fest sticker",
+          "a name label",
+          "a cartoon sticker",
+          "an NGO logo sticker"
+        ]
+      },
+      "dent_location": {
+        "q": "Where is the dent or scratch?",
+        "options": [
+          "dent near the bottom",
+          "dent on the cap",
+          "no dent",
+          "scratch on the side",
+          "dent near the neck"
+        ]
+      },
+      "content": {
+        "q": "What is inside the bottle?",
+        "options": [
+          "empty",
+          "half filled with water",
+          "a tea bag inside",
+          "a lemon slice inside"
+        ]
+      },
+      "strap": {
+        "q": "What kind of strap or handle does it have?",
+        "options": [
+          "a black strap",
+          "no strap",
+          "a loop on the cap",
+          "a rope handle"
+        ]
+      }
+    }
+  },
+  "laptop": {
+    "group": "electronics",
+    "questions": {
+      "lid_sticker": {
+        "q": "What sticker is on the lid?",
+        "options": [
+          "a GitHub sticker",
+          "no sticker",
+          "a Python sticker",
+          "a band sticker",
+          "a college club sticker",
+          "a cartoon sticker"
+        ]
+      },
+      "wallpaper": {
+        "q": "What is the desktop wallpaper?",
+        "options": [
+          "a mountain sunset",
+          "a cricket player photo",
+          "a family photo",
+          "plain black",
+          "an anime character",
+          "a car photo",
+          "a beach photo",
+          "a cat photo"
+        ]
+      },
+      "charger_included": {
+        "q": "Was a charger with it?",
+        "options": [
+          "yes, with a black adapter",
+          "no charger",
+          "yes, with an extension cord",
+          "only the cable"
+        ]
+      },
+      "scratch": {
+        "q": "What marks does it have?",
+        "options": [
+          "scratch on the left corner",
+          "no visible scratch",
+          "dent on the lid",
+          "worn keys near the touchpad"
+        ]
+      }
+    }
+  },
+  "earbuds case": {
+    "group": "electronics",
+    "questions": {
+      "cover": {
+        "q": "What cover does the case have?",
+        "options": [
+          "a plain case",
+          "a silicone cover with a hook",
+          "a cartoon silicone cover",
+          "a glitter cover",
+          "a leather pouch"
+        ]
+      },
+      "engraved": {
+        "q": "Is there any marking on it?",
+        "options": [
+          "initial A",
+          "initial S",
+          "no marking",
+          "a heart drawn with marker",
+          "initial R",
+          "a name label"
+        ]
+      },
+      "buds_present": {
+        "q": "Which earbuds are inside?",
+        "options": [
+          "both buds present",
+          "only the left bud",
+          "only the right bud",
+          "no buds"
+        ]
+      },
+      "charm": {
+        "q": "Is there a charm attached?",
+        "options": [
+          "a tiny bear charm",
+          "no charm",
+          "a metal ring",
+          "a beaded charm"
+        ]
+      }
+    }
+  },
+  "keys": {
+    "group": "accessories",
+    "questions": {
+      "key_count": {
+        "q": "How many keys are there?",
+        "options": [
+          "two keys",
+          "three keys",
+          "four keys",
+          "one key",
+          "five keys"
+        ]
+      },
+      "charm": {
+        "q": "What charm is on the keychain?",
+        "options": [
+          "a bell charm",
+          "a plastic football",
+          "a small torch",
+          "a leather tag",
+          "a bottle opener",
+          "a cartoon figure"
+        ]
+      },
+      "tag_text": {
+        "q": "What is written on the tag?",
+        "options": [
+          "a room number",
+          "no tag",
+          "a hostel name",
+          "a red key cover",
+          "a cycle lock key attached"
+        ]
+      },
+      "ring_type": {
+        "q": "What kind of ring holds the keys?",
+        "options": [
+          "a steel ring",
+          "a carabiner",
+          "a plastic ring",
+          "a split ring with a loop"
+        ]
+      }
+    }
+  },
+  "umbrella": {
+    "group": "accessories",
+    "questions": {
+      "handle": {
+        "q": "What does the handle look like?",
+        "options": [
+          "a curved wooden handle",
+          "a black plastic handle",
+          "a straight handle",
+          "a handle with a rubber grip"
+        ]
+      },
+      "print": {
+        "q": "What is inside the canopy?",
+        "options": [
+          "floral print inside",
+          "plain inside",
+          "a company logo",
+          "a checked pattern",
+          "a polka dot pattern"
+        ]
+      },
+      "damage": {
+        "q": "Is there any damage?",
+        "options": [
+          "a bent rib",
+          "no damage",
+          "a torn edge",
+          "a missing button"
+        ]
+      },
+      "strap_color": {
+        "q": "What strap does it have?",
+        "options": [
+          "a red strap",
+          "no strap",
+          "a blue strap",
+          "a black Velcro strap"
+        ]
+      }
+    }
+  },
+  "calculator": {
+    "group": "stationery",
+    "questions": {
+      "model": {
+        "q": "What is the model number?",
+        "options": [
+          "fx-991EX",
+          "fx-82MS",
+          "fx-991ES Plus",
+          "fx-570ES"
+        ]
+      },
+      "name_marking": {
+        "q": "Is anything written on it?",
+        "options": [
+          "name written on the back",
+          "initials on the cover",
+          "no marking",
+          "a sticker with a roll number"
+        ]
+      },
+      "cover": {
+        "q": "What cover does it have?",
+        "options": [
+          "a black slide cover",
+          "no cover",
+          "a scratched cover",
+          "a blue flip cover"
+        ]
+      },
+      "damage": {
+        "q": "Is any key damaged?",
+        "options": [
+          "a missing key cap",
+          "no damage",
+          "a cracked corner",
+          "a faded 7 key"
+        ]
+      }
+    }
+  },
+  "spectacles case": {
+    "group": "accessories",
+    "questions": {
+      "frame_color": {
+        "q": "What colour is the frame inside?",
+        "options": [
+          "black frame",
+          "silver frame",
+          "brown frame",
+          "transparent frame",
+          "gold frame"
+        ]
+      },
+      "case_inside": {
+        "q": "What else is inside the case?",
+        "options": [
+          "a cleaning cloth",
+          "a spare nose pad",
+          "no cloth",
+          "a screwdriver kit",
+          "a visiting card"
+        ]
+      },
+      "lens_condition": {
+        "q": "What is the lens condition?",
+        "options": [
+          "a scratch on the right lens",
+          "no scratches",
+          "an anti-glare coating",
+          "a slightly loose screw"
+        ]
+      },
+      "case_print": {
+        "q": "What is printed on the case?",
+        "options": [
+          "a logo of an optical shop",
+          "no logo",
+          "a floral print",
+          "a name label"
+        ]
+      }
+    }
+  },
+  "power bank": {
+    "group": "electronics",
+    "questions": {
+      "capacity": {
+        "q": "What capacity is printed on it?",
+        "options": [
+          "10000 mAh",
+          "20000 mAh",
+          "5000 mAh",
+          "10000 mAh slim",
+          "20000 mAh with display"
+        ]
+      },
+      "cable": {
+        "q": "Is a cable attached?",
+        "options": [
+          "a short white cable attached",
+          "no cable",
+          "a type-C cable",
+          "a lightning cable"
+        ]
+      },
+      "sticker": {
+        "q": "Is there a sticker on it?",
+        "options": [
+          "a name sticker",
+          "no sticker",
+          "a cartoon sticker",
+          "a price sticker"
+        ]
+      },
+      "damage": {
+        "q": "Is there any damage?",
+        "options": [
+          "a dent on one corner",
+          "no damage",
+          "a scratched back",
+          "a loose port"
+        ]
+      }
+    }
+  },
+  "smartwatch": {
+    "group": "electronics",
+    "questions": {
+      "strap_color": {
+        "q": "What colour is the strap?",
+        "options": [
+          "a black strap",
+          "a blue strap",
+          "an olive strap",
+          "a pink strap",
+          "a white strap",
+          "a metal strap"
+        ]
+      },
+      "watch_face": {
+        "q": "What watch face is set?",
+        "options": [
+          "a cricket watch face",
+          "a digital face with steps",
+          "an analog face",
+          "a family photo face",
+          "a plain black face"
+        ]
+      },
+      "damage": {
+        "q": "Is there any damage?",
+        "options": [
+          "a scratch on the glass",
+          "no damage",
+          "a scuffed corner",
+          "a loose strap"
+        ]
+      },
+      "extras": {
+        "q": "What else was with it?",
+        "options": [
+          "the charging dock in a pouch",
+          "no dock",
+          "a spare strap in a pouch"
+        ]
+      }
+    }
+  },
+  "notebook": {
+    "group": "stationery",
+    "questions": {
+      "cover_doodle": {
+        "q": "What is on the cover?",
+        "options": [
+          "a doodle of a cat",
+          "a name label",
+          "subject name only",
+          "no marking",
+          "a sticker of a planet",
+          "a coffee stain"
+        ]
+      },
+      "subject": {
+        "q": "Which subject is it for?",
+        "options": [
+          "Data Structures",
+          "Operating Systems",
+          "Engineering Maths",
+          "DBMS",
+          "Physics",
+          "Machine Learning"
+        ]
+      },
+      "first_page": {
+        "q": "What is on the first page?",
+        "options": [
+          "a timetable",
+          "a name and roll number",
+          "a cartoon",
+          "an empty first page"
+        ]
+      },
+      "loose_item": {
+        "q": "Is there anything loose inside?",
+        "options": [
+          "a loose sheet inside",
+          "a pen clipped inside",
+          "a sticky note inside",
+          "nothing inside"
+        ]
+      }
+    }
+  },
+  "charger": {
+    "group": "electronics",
+    "questions": {
+      "type": {
+        "q": "What kind of charger is it?",
+        "options": [
+          "a 65W laptop charger",
+          "a 20W phone charger",
+          "a 33W fast charger",
+          "a USB cable with adapter"
+        ]
+      },
+      "cable_wrap": {
+        "q": "How is the cable wrapped?",
+        "options": [
+          "a velcro wrap",
+          "a rubber band around the cable",
+          "tape on the cable",
+          "no wrap"
+        ]
+      },
+      "marking": {
+        "q": "Is there any marking?",
+        "options": [
+          "a name written in marker",
+          "initials",
+          "no marking",
+          "coloured tape on the cable"
+        ]
+      },
+      "damage": {
+        "q": "Is there any damage?",
+        "options": [
+          "a frayed cable near the pin",
+          "no damage",
+          "a bent pin",
+          "a cracked adapter body"
+        ]
+      }
+    }
+  }
+}
