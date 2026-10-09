@@ -15,5 +15,4 @@ Thumbs.db
 
 # Database (keep local db local)
 lostfound.db
-backend/lostfound.db
 backend/uploads/
