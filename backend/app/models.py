@@ -61,6 +61,7 @@ class Report(Base):
     time_window_hours: Mapped[float] = mapped_column(Float, default=1.0)
     status: Mapped[str] = mapped_column(String(20), default='open', index=True)  # open | claimed | closed
     ocr_text: Mapped[str] = mapped_column(Text, default='')
+    handover_instructions: Mapped[str | None] = mapped_column(String, nullable=True)
     
     img_emb = mapped_column(VectorTypeImg, nullable=True)          # CLIP image (512-d)
     clip_txt_emb = mapped_column(VectorTypeImg, nullable=True)     # CLIP text cross-modal (512-d)
@@ -117,6 +118,7 @@ class Claim(Base):
     attempts: Mapped[int] = mapped_column(Integer, default=0)
     decision: Mapped[str] = mapped_column(String(20), default='pending')  # pending | approved | manual_review | rejected
     handover_hash: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    handover_plaintext: Mapped[str | None] = mapped_column(String(255), nullable=True)
     decided_by: Mapped[int | None] = mapped_column(ForeignKey('users.id'), nullable=True)
     created_at: Mapped[dt.datetime] = mapped_column(DateTime, default=now)
     

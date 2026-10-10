@@ -15,7 +15,16 @@ export default function ClaimPage() {
   useEffect(() => {
     api.post(`/matches/${matchId}/claim`)
       .then((res) => {
-        setClaim(res.data);
+        if (res.data.status) {
+          // Already decided claim
+          setResult({
+            result: res.data.status,
+            handover_code: res.data.handover_code,
+            attempts_left: 0
+          });
+        } else {
+          setClaim(res.data);
+        }
       })
       .catch((ex) => {
         setErr(errMsg(ex, 'Cannot start ownership verification for this item.'));
@@ -75,16 +84,27 @@ export default function ClaimPage() {
               </div>
 
               {/* Handover Code Display */}
-              <div className="p-6 rounded-2xl bg-slate-900 border border-slate-700/80 space-y-2">
-                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-widest flex items-center justify-center gap-1.5">
-                  <KeyRound className="w-4 h-4 text-emerald-400" /> One-Time Handover Code
+              <div className="p-6 rounded-2xl bg-slate-900 border border-slate-700/80 space-y-4">
+                <div>
+                  <div className="text-[11px] font-mono text-slate-400 uppercase tracking-widest flex items-center justify-center gap-1.5">
+                    <KeyRound className="w-4 h-4 text-emerald-400" /> One-Time Handover Code
+                  </div>
+                  <div className="text-4xl sm:text-5xl font-mono font-black text-emerald-400 tracking-[0.25em] select-all py-2">
+                    {result.handover_code}
+                  </div>
+                  <p className="text-[11px] text-amber-300/80">
+                    ⚠️ Save this code. Give it to the finder during handover. Both reports will close once confirmed.
+                  </p>
                 </div>
-                <div className="text-4xl sm:text-5xl font-mono font-black text-emerald-400 tracking-[0.25em] select-all py-2">
-                  {result.handover_code}
-                </div>
-                <p className="text-[11px] text-amber-300/80">
-                  ⚠️ Save this code. Give it to the finder during handover. Both reports will close once confirmed.
-                </p>
+                
+                {result.handover_instructions && (
+                  <div className="pt-4 border-t border-slate-800 text-left">
+                    <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Meeting Details & Instructions</div>
+                    <div className="text-sm text-slate-300 bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
+                      {result.handover_instructions}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}

@@ -56,6 +56,7 @@ async def create_report(
     place_id: int = Form(...),
     event_time: str = Form(...),
     time_window_hours: float = Form(1.0),
+    handover_instructions: str = Form(None),
     hidden_details: str = Form('{}'),
     image: UploadFile | None = File(None),
     db: Session = Depends(get_db),
@@ -89,7 +90,8 @@ async def create_report(
         description=description.strip(),
         place_id=place_id,
         event_time=event_dt,
-        time_window_hours=time_window_hours
+        time_window_hours=time_window_hours,
+        handover_instructions=handover_instructions.strip() if handover_instructions else None
     )
     
     rep.txt_emb = embed_text(rep.description)

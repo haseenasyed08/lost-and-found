@@ -22,6 +22,7 @@ export default function ReportForm() {
     place_id: '',
     event_time: new Date().toISOString().slice(0, 16),
     time_window_hours: 1.0,
+    handover_instructions: '',
   });
 
   const [hiddenDetails, setHiddenDetails] = useState({});
@@ -55,6 +56,10 @@ export default function ReportForm() {
     fd.append('place_id', form.place_id);
     fd.append('event_time', form.event_time);
     fd.append('time_window_hours', form.time_window_hours);
+    
+    if (!isLost && form.handover_instructions) {
+      fd.append('handover_instructions', form.handover_instructions);
+    }
 
     if (type === 'found') {
       const answersGiven = Object.values(hiddenDetails).filter(v => String(v).trim().length > 0);
@@ -251,6 +256,22 @@ export default function ReportForm() {
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {!isLost && (
+          <div className="pt-4 border-t border-slate-800 space-y-3">
+            <h2 className="text-sm font-bold text-slate-300 uppercase tracking-wider">Handover / Meeting Details (Optional)</h2>
+            <p className="text-xs text-slate-400">
+              Where should the owner meet you or collect the item if they pass verification? (e.g. "Leave it at Admin Office", "Meet at Canteen between 1PM-2PM")
+            </p>
+            <textarea
+              rows={2}
+              value={form.handover_instructions}
+              onChange={handleChange('handover_instructions')}
+              placeholder="Enter meeting instructions..."
+              className="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:border-brand-500 resize-none"
+            />
           </div>
         )}
 

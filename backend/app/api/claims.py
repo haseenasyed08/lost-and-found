@@ -40,7 +40,11 @@ def start_claim(mid: int, db: Session = Depends(get_db), user: User = Depends(cu
         db.commit()
         db.refresh(c)
         
-    if c.attempts >= settings.MAX_CLAIM_ATTEMPTS or c.decision in ('approved', 'manual_review'):
+    if c.decision == 'approved':
+        return {'claim_id': c.id, 'status': 'approved', 'handover_code': c.handover_plaintext, 'handover_instructions': m.found.handover_instructions}
+    elif c.decision == 'manual_review':
+        return {'claim_id': c.id, 'status': 'under_review'}
+    elif c.attempts >= settings.MAX_CLAIM_ATTEMPTS:
         raise HTTPException(403, 'No verification attempts left for this match')
         
     keys = _keys(m.found)
@@ -76,6 +80,7 @@ def submit_answers(cid: int, body: AnswersIn, db: Session = Depends(get_db), use
     if decision == 'approved':
         code = new_handover_code()
         c.handover_hash = hash_password(code)
+        c.handover_plaintext = code
         m.status = 'claimed'
         found.status = 'claimed'
         notify(db, found.user_id, 'An owner passed verification. Arrange the handover and ask for their code.', f'/reports/{found.id}')
@@ -89,6 +94,7 @@ def submit_answers(cid: int, body: AnswersIn, db: Session = Depends(get_db), use
     return {
         'result': label_map.get(decision, 'not_verified'),
         'handover_code': code,
+        'handover_instructions': found.handover_instructions,
         'attempts_left': max(0, settings.MAX_CLAIM_ATTEMPTS - c.attempts)
     }
 

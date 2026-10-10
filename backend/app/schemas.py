@@ -20,6 +20,7 @@ def report_out(r, owner=False):
         'brand': r.brand,
         'color': r.color,
         'description': r.description,
+        'handover_instructions': r.handover_instructions,
         'place': place_name,
         'place_id': r.place_id,
         'latitude': lat,
